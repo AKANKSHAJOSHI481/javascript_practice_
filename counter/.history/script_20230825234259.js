@@ -1,1 +1,0 @@
-var value = document.querySelector('.')
