@@ -20,7 +20,7 @@ let passwordLength = 10;
 let checkCount = 0;
 handleSlider();
 // set strength circle to gray
-
+setIndicator("#ccc");
 // Copycontent
 async function Copycontent(){
     try{
@@ -41,12 +41,16 @@ async function Copycontent(){
 function handleSlider(){
     inputSlider.value = passwordLength;
     lengthDisplay.innerText = passwordLength;
+    const min = inputSlider.min;
+    const max = inputSlider.max;
+    inputSlider.style.backgroundSize = ((passwordLength-min)*100/(max-min)) + "% 100";
 }
 // generatePassword
 // Set indicator
 function setIndicator(color){
     indicator.style.backgroundColor = color;
     // shadow
+    indicator.style.boxShadow = "1px 1px 10px" + color;
 }
 
 // getrandominteger - range

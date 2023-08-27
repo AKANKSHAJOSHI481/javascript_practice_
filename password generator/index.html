@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Generator</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     
@@ -11,8 +12,8 @@
         <h1>Password Generator</h1>
         <div class="display-container">
             <input readonly placeholder="Password" class="display" data-passwordDisplay>
-            <button data-copy>
-                <span data-copymsg></span>
+            <button class="copyButton" data-copy>
+                <span class="tooltip" data-copymsg></span>
                 <img src="./assests/copy.svg" alt="copy" width="23" height="23"></button>
             </button>
         </div>
@@ -23,19 +24,19 @@
             </div>
 
             <input type="range" min="1" max="20" class="slider" step="1" data-lengthSlider>
-            <div>
+            <div class="check">
                 <input type="checkbox" id="uppercase">
                 <label for="uppercase">Incude Uppercase letters</label>
             </div>
-            <div>
+            <div class="check">
                 <input type="checkbox" id="lowercase">
                 <label for="lowercase">Incude Lowercase letters</label>
             </div>
-            <div>
+            <div class="check">
                 <input type="checkbox" id="numbers">
                 <label for="numbers">Incude numbers</label>
             </div>
-            <div>
+            <div class="check">
                 <input type="checkbox" id="symbols">
                 <label for="symbols">Incude symbols</label>
             </div>
@@ -43,7 +44,7 @@
             <!-- Strength Section -->
             <div class="strength-container">
                 <p>Strength</p>
-                <div data-indicator></div>
+                <div class="indicator" data-indicator ></div>
             </div>
 
             <!-- Generate password -->
